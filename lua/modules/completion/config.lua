@@ -17,6 +17,8 @@ local enhance_attach = function(client, bufnr)
 end
 -- config server in this function
 function config.nvim_lsp()
+  require'lspconfig'.pylsp.setup{}
+  require'lspconfig'.marksman.setup{}
   require 'lspconfig'.bufls.setup {}
   require 'lspconfig'.ansiblels.setup {}
   require('lsp-format').setup {
