@@ -10,6 +10,7 @@ package({
     { 'nvim-telescope/telescope-fzy-native.nvim' },
     { 'jlesquembre/nterm.nvim' },
     { 'Olical/aniseed' },
+    { "nvim-neotest/nvim-nio" },
   },
 })
 

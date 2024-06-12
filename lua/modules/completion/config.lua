@@ -62,22 +62,22 @@ function config.nvim_lsp()
   }
   require('lspconfig').dockerls.setup {}
   require('lspconfig').bashls.setup {}
-  -- require('lspconfig').gopls.setup {
-  --   cmd = {
-  --     'gopls',                              -- share the gopls instance if there is one already
-  --     '-remote=auto', --[[ debug options ]] --
-  --     "-logfile=auto",
-  --     "-debug=:0",
-  --     '-remote.debug=:0',
-  --     "-rpc.trace",
-  --   },
-  --   on_attach = enhance_attach,
-  --   capabilities = capabilities,
-  --   init_options = {
-  --     usePlaceholders = true,
-  --     completeUnimported = true,
-  --   }
-  -- }
+  require('lspconfig').gopls.setup {
+    cmd = {
+      'gopls',                              -- share the gopls instance if there is one already
+      '-remote=auto', --[[ debug options ]] --
+      "-logfile=auto",
+      "-debug=:0",
+      '-remote.debug=:0',
+      "-rpc.trace",
+    },
+    on_attach = enhance_attach,
+    capabilities = capabilities,
+    init_options = {
+      usePlaceholders = true,
+      completeUnimported = true,
+    }
+  }
 end
 
 function config.nvim_cmp()
